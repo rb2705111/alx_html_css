@@ -361,113 +361,73 @@ section div {
         align-items: flex-start;
     }
 }
-/* Free Membership Section */
-.membership-section {
+/* Free Membership Section - Updated for your HTML structure */
+section {
     background-color: #1e2a3a; /* Dark navy background */
     padding: 80px 20px;
     text-align: center;
     color: white;
-}
-
-.membership-section h2 {
-    font-size: 36px;
-    font-weight: 400;
-    color: white;
-    margin-bottom: 60px;
-}
-
-.membership-section h2 .highlight {
-    color: #9b59b6; /* Purple accent color */
-    font-weight: 600;
-}
-
-.membership-features {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 40px;
-    max-width: 1000px;
-    margin: 0 auto 50px auto;
-    padding: 0 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    align-items: start;
 }
 
-.feature-card {
+/* Make h2 span full width */
+section h2 {
+    grid-column: 1 / -1; /* Span all columns */
+    font-size: 36px;
+    font-weight: 400;
+    color: white;
+    margin-bottom: 20px;
+}
+
+/* Style the feature divs */
+section div {
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
+    max-width: none; /* Override previous max-width from quote section */
 }
 
-.feature-icon {
+/* Style the smile SVG icons */
+section div img {
     width: 60px;
     height: 60px;
-    background: #9b59b6; /* Purple background */
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     margin-bottom: 20px;
+    padding: 15px;
+    background: #9b59b6; /* Purple background circle */
+    border-radius: 50%;
     transition: transform 0.3s ease;
 }
 
-.feature-icon:hover {
+section div img:hover {
     transform: scale(1.1);
 }
 
-/* Smile icon using CSS */
-.feature-icon::after {
-    content: '';
-    width: 30px;
-    height: 30px;
-    border: 2px solid white;
-    border-radius: 50%;
-    position: relative;
-    background: transparent;
-}
-
-.feature-icon::before {
-    content: '';
-    position: absolute;
-    width: 20px;
-    height: 10px;
-    border: 2px solid white;
-    border-top: none;
-    border-radius: 0 0 20px 20px;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -40%);
-    z-index: 2;
-}
-
-/* Eyes for the smile */
-.feature-icon {
-    position: relative;
-}
-
-.feature-icon:after {
-    box-shadow: 
-        -6px -3px 0 0 white, /* left eye */
-        6px -3px 0 0 white;  /* right eye */
-}
-
-.feature-title {
+/* Style the feature titles */
+section div h3 {
     font-size: 18px;
     font-weight: 600;
     color: white;
-    margin-bottom: 15px;
+    margin: 0 0 15px 0; /* Override previous margin */
 }
 
-.feature-description {
+/* Style the feature descriptions */
+section div p {
     font-size: 14px;
     color: #b8c5d1; /* Lighter text color */
     line-height: 1.5;
-    max-width: 200px;
+    font-style: normal; /* Override italic from quote section */
+    margin: 0;
 }
 
-.membership-cta {
-    margin-top: 30px;
-}
-
-.register-btn {
+/* Style the register button */
+section button {
+    grid-column: 1 / -1; /* Span all columns */
     background: linear-gradient(45deg, #9b59b6, #e74c3c);
     color: white;
     padding: 15px 30px;
@@ -478,11 +438,11 @@ section div {
     text-transform: uppercase;
     cursor: pointer;
     transition: all 0.3s ease;
-    text-decoration: none;
-    display: inline-block;
+    margin-top: 30px;
+    justify-self: center;
 }
 
-.register-btn:hover {
+section button:hover {
     background: linear-gradient(45deg, #8e44ad, #c0392b);
     transform: translateY(-2px);
     box-shadow: 0 8px 20px rgba(155, 89, 182, 0.3);
