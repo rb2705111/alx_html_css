@@ -120,4 +120,52 @@ header nav ul li a:hover {
     font-size: 14px;
     color: #dcdcdc;
 }
+/* Quote Section Styling */
+section blockquote {
+    font-style: normal;           /* Remove default italics if needed */
+    font-size: 18px;              /* Adjust font size */
+    line-height: 1.6;             /* Spacing between lines */
+    color: white;                 /* Text color on purple background */
+    margin: 0 0 10px 0;
+    quotes: "«" "»";
+}
+
+section blockquote::before {
+    content: "«";
+    margin-right: 5px;
+}
+
+section blockquote::after {
+    content: "»";
+    margin-left: 5px;
+}
+
+section h3 {
+    font-size: 20px;              /* Adjust according to design */
+    font-weight: bold;
+    color: white;
+    margin: 5px 0 0 0;
+}
+
+section p {
+    font-size: 16px;
+    font-style: italic;           /* Italic for subtitle */
+    color: white;
+    margin: 0;
+}
+
+/* Container for the quote section */
+section {
+    background-color: #a06df0;    /* Purple background from Figma */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    padding: 40px 20px;
+    flex-wrap: wrap;
+}
+
+section div {
+    max-width: 600px;             /* Limit text width for readability */
+}
 
