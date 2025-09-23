@@ -614,3 +614,113 @@ main section:last-child > div > div > div:nth-child(odd) {
         font-size: 13px;
     }
 }
+/* Footer Styling */
+footer {
+    background-color: #1e2a3a; /* Dark navy background matching FAQ section */
+    color: white;
+    padding: 40px 0;
+}
+
+footer section {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    background: transparent; /* Override any previous section background */
+}
+
+/* Top row with logo and social icons */
+footer section > div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: none; /* Override previous max-width */
+}
+
+/* Logo styling */
+footer section > div > img {
+    height: 40px; /* Match header logo size */
+    filter: brightness(0) invert(1); /* Make logo white if it's dark */
+}
+
+/* Social media icons container */
+footer section > div > div {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+/* Individual social media icons */
+footer section > div > div i {
+    font-size: 20px;
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+footer section > div > div i:hover {
+    color: #9b59b6; /* Purple accent on hover */
+    transform: scale(1.2);
+}
+
+/* Copyright text */
+footer section > p {
+    font-size: 14px;
+    color: #b8c5d1; /* Lighter text color */
+    text-align: center;
+    margin: 0;
+    font-style: normal; /* Ensure not italic */
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    footer {
+        padding: 30px 0;
+    }
+    
+    footer section {
+        padding: 0 15px;
+        gap: 25px;
+    }
+    
+    footer section > div {
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+    }
+    
+    footer section > div > div {
+        gap: 25px;
+    }
+    
+    footer section > div > div i {
+        font-size: 24px;
+    }
+}
+
+@media (max-width: 480px) {
+    footer {
+        padding: 25px 0;
+    }
+    
+    footer section {
+        gap: 20px;
+    }
+    
+    footer section > div > img {
+        height: 35px;
+    }
+    
+    footer section > div > div {
+        gap: 20px;
+    }
+}
