@@ -1,1 +1,123 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    background: transparent; /* transparent for overlay on hero image */
+    position: absolute; /* place over hero image */
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 10;
+}
+
+header img {
+    height: 40px; /* logo height from Figma */
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: #ffffff; /* white text for contrast */
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+header nav ul li a:hover {
+    color: #9b59b6; /* example accent color from Figma */
+}
+
+/* Hero Section */
+.hero {
+    position: relative;
+    height: 100vh; /* full viewport height */
+    background: url('images/hero-bg.png') center center / cover no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #ffffff;
+    padding: 0 20px;
+}
+
+.hero h1 {
+    font-size: 64px; /* large heading */
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.hero span {
+    display: inline-block;
+    margin: 0 5px;
+    font-size: 20px;
+    font-weight: 500;
+    color: #dcdcdc; /* slightly lighter than white for subtags */
+}
+
+.hero button {
+    margin-top: 30px;
+    padding: 15px 40px;
+    font-size: 18px;
+    font-weight: 600;
+    color: #fff;
+    background-color: #9b59b6; /* accent color from Figma */
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.hero button:hover {
+    background-color: #8e44ad; /* darker shade on hover */
+}
+
+/* Instructors Section below hero */
+.instructors {
+    margin-top: 80px;
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+}
+
+.instructors .card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+}
+
+.instructors .card img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 15px;
+}
+
+.instructors .card h3 {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.instructors .card p {
+    font-size: 14px;
+    color: #dcdcdc;
+}
 
