@@ -1,3 +1,22 @@
+<head>
+  <meta charset="utf-8">
+  <!-- VIEWPORT: required so mobile browsers render at device width -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Your page title</title>
+
+  <!-- your CSS links -->
+  <link href="base.css" rel="stylesheet">
+  <link href="styles.css" rel="stylesheet">
+</head>
+<body class="works_on_smartphone">
+  <header> ... </header>
+  <main>
+    <article> ... </article>
+    <aside> ... </aside>
+  </main>
+  <footer> ... </footer>
+</body>
 body {
     display: flex;          /* Make it a flex container */
     flex-direction: column; /* Stack children vertically */
@@ -29,4 +48,31 @@ header, footer {
     background-color: #333;
     color: white;
     text-align: center;
+}
+/* Responsive breakpoint - phones and small tablets */
+@media (max-width: 768px) {
+  /* Stack main content vertically */
+  main {
+    flex-direction: column;
+  }
+
+  /* Let article and aside take full width */
+  article, aside {
+    flex: auto;       /* no 2:1 rule on small screens */
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+
+  /* Slightly smaller header/footer padding on phones */
+  header, footer {
+    padding: 12px;
+    font-size: 0.95rem;
+  }
+
+  /* Ensure scrollable areas don't get awkward heights */
+  article, aside {
+    max-height: none; /* allow natural flow on small screens */
+    overflow-y: visible; /* usually better UX on phones */
+  }
 }
