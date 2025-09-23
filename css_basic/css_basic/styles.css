@@ -1,83 +1,32 @@
-/* =========================
-   Base Reset & Fonts
-========================= */
-body, html {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, sans-serif;
-    height: 100%;
-}
-
-/* =========================
-   Flexbox Layout
-========================= */
-
-/* Body: vertical stacking of header, main, footer */
 body {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh; /* full viewport height */
+    display: flex;          /* Make it a flex container */
+    flex-direction: column; /* Stack children vertically */
+    min-height: 100vh;      /* Optional: ensures body takes full viewport height */
+    margin: 0;              /* Remove default margin */
+    padding: 0;             /* Remove default padding */
+    font-family: Arial, sans-serif; /* Optional styling */
+}
+main {
+    display: flex;    /* Make it a flex container */
+    flex-direction: row; /* Children laid out in a row */
+    flex: auto;       /* Takes available width and height automatically */
+}
+article {
+    flex: 2;           /* 2 parts of total 3 */
+    overflow-y: auto;  /* Enable vertical scrolling if content is long */
+    padding: 10px;     /* Optional: spacing inside content */
+    background-color: #f0f0f0; /* Optional: distinguish visually */
 }
 
-/* Header and Footer styling */
+aside {
+    flex: 1;           /* 1 part of total 3 */
+    overflow-y: auto;  /* Enable vertical scrolling */
+    padding: 10px;     /* Optional */
+    background-color: #d0d0d0; /* Optional */
+}
 header, footer {
+    padding: 20px;
     background-color: #333;
     color: white;
     text-align: center;
-    padding: 20px;
 }
-
-/* Main: horizontal layout for article + aside */
-main {
-    display: flex;
-    flex-direction: row;
-    flex: auto; /* take available width and height */
-}
-
-/* Article: 2/3 width, scrollable */
-article {
-    flex: 2;
-    padding: 15px;
-    overflow-y: auto;
-    background-color: #f0f0f0;
-}
-
-/* Aside: 1/3 width, scrollable */
-aside {
-    flex: 1;
-    padding: 15px;
-    overflow-y: auto;
-    background-color: #d0d0d0;
-}
-
-/* =========================
-   Optional Extras
-========================= */
-
-/* Make images responsive */
-img {
-    max-width: 100%;
-    height: auto;
-}
-
-/* Links */
-a {
-    color: #0066cc;
-    text-decoration: none;
-}
-
-a:hover {
-    text-decoration: underline;
-}
-
-/* Paragraph spacing */
-p {
-    margin-bottom: 1em;
-}
-
-/* Headings spacing */
-h1, h2, h3, h4, h5, h6 {
-    margin: 0.5em 0;
-}
-
