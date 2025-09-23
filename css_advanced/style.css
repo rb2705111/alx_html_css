@@ -513,3 +513,104 @@ section button:hover {
         font-size: 14px;
     }
 }
+/* FAQ Section Styling */
+/* Target the FAQ section specifically - assuming it's the last section before footer */
+main section:last-child {
+    background-color: #1e2a3a; /* Dark navy background matching membership section */
+    padding: 80px 20px;
+    text-align: center;
+    color: white;
+    display: block; /* Override previous grid display */
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* FAQ Title */
+main section:last-child h2 {
+    font-size: 36px;
+    font-weight: 400;
+    color: white;
+    margin-bottom: 60px;
+    grid-column: auto; /* Reset grid column span */
+}
+
+/* Main FAQ container - two column layout */
+main section:last-child > div {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    text-align: left;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+/* Individual FAQ column */
+main section:last-child > div > div {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    max-width: none; /* Reset max-width */
+}
+
+/* FAQ Question styling */
+main section:last-child h3 {
+    font-size: 18px;
+    font-weight: 600;
+    color: white;
+    margin: 0 0 15px 0;
+    line-height: 1.4;
+}
+
+/* FAQ Answer styling */
+main section:last-child > div > div > div:nth-child(even) {
+    font-size: 14px;
+    color: #b8c5d1; /* Lighter text color for answers */
+    line-height: 1.6;
+    margin-bottom: 20px;
+    font-style: normal; /* Ensure not italic */
+}
+
+/* FAQ Question containers */
+main section:last-child > div > div > div:nth-child(odd) {
+    margin-bottom: 0;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    main section:last-child {
+        padding: 60px 15px;
+    }
+    
+    main section:last-child h2 {
+        font-size: 28px;
+        margin-bottom: 40px;
+    }
+    
+    /* Stack columns on mobile */
+    main section:last-child > div {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+    
+    main section:last-child > div > div {
+        gap: 25px;
+    }
+}
+
+@media (max-width: 480px) {
+    main section:last-child {
+        padding: 40px 15px;
+    }
+    
+    main section:last-child > div {
+        gap: 30px;
+    }
+    
+    main section:last-child h3 {
+        font-size: 16px;
+    }
+    
+    main section:last-child > div > div > div:nth-child(even) {
+        font-size: 13px;
+    }
+}
