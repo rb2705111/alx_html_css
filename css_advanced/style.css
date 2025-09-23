@@ -361,3 +361,195 @@ section div {
         align-items: flex-start;
     }
 }
+/* Free Membership Section */
+.membership-section {
+    background-color: #1e2a3a; /* Dark navy background */
+    padding: 80px 20px;
+    text-align: center;
+    color: white;
+}
+
+.membership-section h2 {
+    font-size: 36px;
+    font-weight: 400;
+    color: white;
+    margin-bottom: 60px;
+}
+
+.membership-section h2 .highlight {
+    color: #9b59b6; /* Purple accent color */
+    font-weight: 600;
+}
+
+.membership-features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
+    max-width: 1000px;
+    margin: 0 auto 50px auto;
+    padding: 0 20px;
+}
+
+.feature-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.feature-icon {
+    width: 60px;
+    height: 60px;
+    background: #9b59b6; /* Purple background */
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease;
+}
+
+.feature-icon:hover {
+    transform: scale(1.1);
+}
+
+/* Smile icon using CSS */
+.feature-icon::after {
+    content: '';
+    width: 30px;
+    height: 30px;
+    border: 2px solid white;
+    border-radius: 50%;
+    position: relative;
+    background: transparent;
+}
+
+.feature-icon::before {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 10px;
+    border: 2px solid white;
+    border-top: none;
+    border-radius: 0 0 20px 20px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -40%);
+    z-index: 2;
+}
+
+/* Eyes for the smile */
+.feature-icon {
+    position: relative;
+}
+
+.feature-icon:after {
+    box-shadow: 
+        -6px -3px 0 0 white, /* left eye */
+        6px -3px 0 0 white;  /* right eye */
+}
+
+.feature-title {
+    font-size: 18px;
+    font-weight: 600;
+    color: white;
+    margin-bottom: 15px;
+}
+
+.feature-description {
+    font-size: 14px;
+    color: #b8c5d1; /* Lighter text color */
+    line-height: 1.5;
+    max-width: 200px;
+}
+
+.membership-cta {
+    margin-top: 30px;
+}
+
+.register-btn {
+    background: linear-gradient(45deg, #9b59b6, #e74c3c);
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 25px;
+    font-size: 16px;
+    font-weight: 600;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.register-btn:hover {
+    background: linear-gradient(45deg, #8e44ad, #c0392b);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(155, 89, 182, 0.3);
+}
+
+/* Alternative simple smile icon approach */
+.simple-smile {
+    position: relative;
+    width: 30px;
+    height: 30px;
+}
+
+.simple-smile::before {
+    content: '😊';
+    font-size: 24px;
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* If you prefer to use the simple emoji approach, add this class to feature-icon */
+.feature-icon.emoji::after,
+.feature-icon.emoji::before {
+    display: none;
+}
+
+.feature-icon.emoji {
+    background: #9b59b6;
+}
+
+.feature-icon.emoji .simple-smile::before {
+    content: '😊';
+    font-size: 24px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .membership-section {
+        padding: 60px 15px;
+    }
+    
+    .membership-section h2 {
+        font-size: 28px;
+        margin-bottom: 40px;
+    }
+    
+    .membership-features {
+        grid-template-columns: 1fr;
+        gap: 30px;
+        margin-bottom: 40px;
+    }
+    
+    .feature-description {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .membership-features {
+        grid-template-columns: 1fr;
+        padding: 0 10px;
+    }
+    
+    .register-btn {
+        padding: 12px 25px;
+        font-size: 14px;
+    }
+}
