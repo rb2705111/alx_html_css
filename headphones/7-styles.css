@@ -1,1 +1,208 @@
+/* ===========================
+   ANIMATIONS
+   =========================== */
 
+/* Feature Items Animation */
+.feature-item {
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    animation: fadeInUp 0.6s ease forwards;
+    opacity: 0;
+}
+
+.feature-item:nth-child(1) {
+    animation-delay: 0.1s;
+}
+
+.feature-item:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.feature-item:nth-child(3) {
+    animation-delay: 0.3s;
+}
+
+.feature-item:nth-child(4) {
+    animation-delay: 0.4s;
+}
+
+.feature-item:hover {
+    transform: translateY(-10px) scale(1.05);
+}
+
+.feature-item [class^="icon-"] {
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.feature-item:hover [class^="icon-"] {
+    transform: rotate(360deg) scale(1.1);
+    color: #FF4545;
+}
+
+/* Result Items Animation */
+.result-item {
+    transition: transform 0.3s ease;
+    animation: bounceIn 0.8s ease forwards;
+    opacity: 0;
+}
+
+.result-item:nth-child(1) {
+    animation-delay: 0.1s;
+}
+
+.result-item:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.result-item:nth-child(3) {
+    animation-delay: 0.3s;
+}
+
+.result-item:nth-child(4) {
+    animation-delay: 0.4s;
+}
+
+.result-item:hover {
+    transform: scale(1.1) rotate(5deg);
+}
+
+.pentagon,
+.pentagon-css {
+    transition: all 0.3s ease;
+}
+
+.result-item:hover .pentagon,
+.result-item:hover .pentagon-css {
+    transform: scale(1.1);
+    filter: brightness(1.1);
+}
+
+.percentage {
+    transition: transform 0.3s ease;
+}
+
+.result-item:hover .percentage {
+    transform: scale(1.2);
+}
+
+/* Button Animations */
+.btn {
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.btn::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.2);
+    transform: translate(-50%, -50%);
+    transition: width 0.6s, height 0.6s;
+}
+
+.btn:hover::before {
+    width: 300px;
+    height: 300px;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+}
+
+/* Form Input Animations */
+.form-group input,
+.form-group textarea {
+    transition: all 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(255, 101, 101, 0.2);
+}
+
+/* Social Links Animation */
+.social-links a {
+    transition: all 0.3s ease;
+}
+
+.social-links a:hover {
+    transform: translateY(-5px) rotate(360deg);
+}
+
+/* ===========================
+   KEYFRAME ANIMATIONS
+   =========================== */
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes bounceIn {
+    0% {
+        opacity: 0;
+        transform: scale(0.3);
+    }
+    50% {
+        opacity: 1;
+        transform: scale(1.05);
+    }
+    70% {
+        transform: scale(0.9);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Continuous animations (optional - comment out if too much) */
+.feature-item [class^="icon-"] {
+    animation: pulse 2s ease-in-out infinite;
+}
+
+.feature-item:nth-child(1) [class^="icon-"] {
+    animation-delay: 0s;
+}
+
+.feature-item:nth-child(2) [class^="icon-"] {
+    animation-delay: 0.2s;
+}
+
+.feature-item:nth-child(3) [class^="icon-"] {
+    animation-delay: 0.4s;
+}
+
+.feature-item:nth-child(4) [class^="icon-"] {
+    animation-delay: 0.6s;
+}
