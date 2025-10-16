@@ -1,1 +1,62 @@
+/* ===========================
+   CSS PENTAGON (No Images)
+   =========================== */
 
+/* Remove old pentagon styles and add these: */
+
+.pentagon-css {
+    position: relative;
+    width: 190px;
+    height: 190px;
+    background-color: var(--primary-color);
+    clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+.pentagon-css .result-content {
+    position: relative;
+    text-align: center;
+    z-index: 1;
+}
+
+/* Alternative Pentagon Method using borders (more compatible) */
+.pentagon-css-alt {
+    position: relative;
+    width: 0;
+    height: 0;
+    border-left: 95px solid transparent;
+    border-right: 95px solid transparent;
+    border-bottom: 70px solid var(--primary-color);
+    margin: 50px auto 0;
+}
+
+.pentagon-css-alt::before {
+    content: "";
+    position: absolute;
+    top: 70px;
+    left: -95px;
+    width: 0;
+    height: 0;
+    border-left: 95px solid transparent;
+    border-right: 95px solid transparent;
+    border-top: 70px solid var(--primary-color);
+}
+
+.pentagon-css-alt .result-content {
+    position: absolute;
+    top: -20px;
+    left: -80px;
+    width: 160px;
+    text-align: center;
+}
+
+/* Responsive adjustments for CSS pentagon */
+@media (max-width: 480px) {
+    .pentagon-css {
+        width: 150px;
+        height: 150px;
+    }
+}
