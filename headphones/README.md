@@ -1,12 +1,12 @@
-# Headphones Landing Page
+Headphones Landing Page
 
 > A fully responsive landing page built from scratch using HTML and CSS
 
-## 📋 Project Description
+📋 Project Description
 
 This project implements a responsive landing page for a headphones website. Built entirely with HTML and CSS (no frameworks), demonstrating modern web development practices.
 
-## ✨ Features
+Features
 
 - Fully Responsive (Desktop & Mobile)
 - No CSS Framework
@@ -15,25 +15,25 @@ This project implements a responsive landing page for a headphones website. Buil
 - Interactive Hover Effects
 - Contact Form
 
-## 🛠️ Technologies
+Technologies
 
 - HTML5
 - CSS3
 - JavaScript (hamburger menu only)
 
-## 📱 Responsive Design
+Responsive Design
 
 - **Desktop**: > 480px
 - **Mobile**: ≤ 480px
 
-## 🎯 Interactions
+Interactions
 
 - Links hover/active: `#FF6565`
 - Button hover/active: `opacity: 0.9`
 - Max content width: `1000px` (centered)
 
-## 📂 Project Structure
-```
+Project Structure
+
 headphones/
 ├── README.md
 ├── 0-index.html         # Header/Hero
@@ -57,7 +57,7 @@ headphones/
 └── fonts/
 ```
 
-## 🚀 Tasks Progress
+Tasks Progress
 
 - [ ] Task 0: Header/Hero section
 - [ ] Task 1: "What we do..." section
@@ -68,12 +68,12 @@ headphones/
 - [ ] Task 7: Animations
 - [ ] Task 8: Hamburger menu
 
-## 👤 Author
+Author
 
 ruthb2705111
 - GitHub: [@ruthb2705111](https://github.com/ruthb2705111)
 
-## 📜 License
+License
 
 ALX Software Engineering Program
 
